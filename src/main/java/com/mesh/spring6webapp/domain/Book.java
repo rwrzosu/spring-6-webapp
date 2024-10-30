@@ -22,7 +22,6 @@ public class Book {
     Set<Author> authors = new HashSet<Author>();
 
     @ManyToOne
-    @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
     @Override
