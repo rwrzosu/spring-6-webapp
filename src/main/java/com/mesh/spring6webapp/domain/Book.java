@@ -21,6 +21,10 @@ public class Book {
     @ManyToMany(mappedBy = "books")
     Set<Author> authors = new HashSet<Author>();
 
+    @ManyToOne
+    @JoinColumn(name = "publisher_id")
+    private Publisher publisher;
+
     @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
